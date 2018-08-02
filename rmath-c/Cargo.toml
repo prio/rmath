@@ -1,0 +1,18 @@
+[package]
+name = "rmath-c"
+build = "build.rs"
+
+version = "0.1.0"
+authors = ["Jonathan Harrington <jonathan@jonharrington.org>"]
+
+
+[lib]
+name = "rmath_c"
+crate-type = ["cdylib"]
+
+[build-dependencies]
+cbindgen = "0.6"
+
+[dependencies]
+rmath = { version = "0.1.0", path = ".." }
+libc = "0.2"
